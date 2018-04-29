@@ -13,6 +13,6 @@ defmodule MaruVersion.Mixfile do
   end
 
   defp deps do
-    [ {:maru, "~> 0.11"} ]
+    [ {:maru, "~> 0.11"}, {:dialyxir, "~> 0.5", only: [:dev], runtime: false} ]
   end
 end
