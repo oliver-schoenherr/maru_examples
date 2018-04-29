@@ -4,8 +4,11 @@ defmodule MaruVersion.API.V1 do
   version "v1"
 
   desc "get v1"
+  params do
+    requires :age,    type: Integer, values: 18..65
+  end
   get do
-    conn |> text("It works V1!")
+    conn |> json(params)
   end
 
   mount Maru.Version.API.Shared
